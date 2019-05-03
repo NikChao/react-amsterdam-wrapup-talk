@@ -8,6 +8,8 @@ import Container from './container'
 
 ### Design systems
 
+---
+
 - Reducing choice in building blocks (typography, color, spacing)
 - We can use simplified react to bridge the gap between design/FE development
 
@@ -29,6 +31,9 @@ import Container from './container'
 ---
 
 ### SSR
+
+---
+
 - Becoming more popular, especially `Next.js`
 - Max regrets not using Next.js for spectrum
 
@@ -41,6 +46,9 @@ import Container from './container'
 ---
 
 ### Micro frontends
+
+---
+
 - DAZN talked about how they break FE work across many teams
 - Spotify way: Many iframes rendered on the page which communicate with an in-house event bus (although, spotify is moving to a react/redux solution so idk if they still considewr this a good idea)
 - SkyScanner/OpenTable use https://opencomponents.github.io/
@@ -58,8 +66,10 @@ import Container from './container'
 
 ---
 
-
 ### GraphQL
+
+---
+
 1. Workshop
     - serving graph-ql is actually a piece of cake with the right tools (yoga, graphpack)
     - react-apollo-hooks is very good, but not official, therefore requires a different context provider to react-apollo(-boost)
@@ -69,11 +79,12 @@ import Container from './container'
     - better TS support (apollo-cli can already auto-gen TS based on GQL schema)
     - better suggestions (i.e. for query perf)
 
+---
+
+### Fundamentals/React/Misc
 
 ---
 
-
-### Fundamentals/React/Misc
 - babel repl is good for figuring out exactly what's going on
 
 - components should take props which handle behaviour not interaction
@@ -81,7 +92,6 @@ import Container from './container'
 - if some logic isn't core to a feature, put it in a HOC or hook
 
 - When designing an app which is mobile first/web for support, max stoiber says use react-native-web
-
 
 ---
 
