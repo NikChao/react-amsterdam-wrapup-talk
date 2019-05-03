@@ -1,8 +1,8 @@
 export { default as theme } from './theme'
 import Container from './container'
 
-## React amsterdam
-### wrap up
+
+## React 🇳🇱 wrap up
 
 ---
 
@@ -29,24 +29,35 @@ import Container from './container'
 ---
 
 ### SSR
-- Seems to be becoming more popular, especially `Next.js`
-- Max stoiber talked up Next.js, regrets not using it as their SSR solution at spectrum
-- Perf talk about netflix getting +50% perceived perf (halved TTI) by removing all client side react
-- esxjs which is an optimisation over Next js
+- Becoming more popular, especially `Next.js`
+- Max regrets not using Next.js for spectrum
 
+- Performance
+  - netflix getting +50% perceived perf (halved TTI) by removing all client side react
+  - esxjs which is an optimisation over Next js
+
+- 🆕 https://nextjs.org
 
 ---
 
 ### Micro frontends
 - DAZN talked about how they break FE work across many teams
 - Spotify way: Many iframes rendered on the page which communicate with an in-house event bus (although, spotify is moving to a react/redux solution so idk if they still considewr this a good idea)
+- SkyScanner/OpenTable use https://opencomponents.github.io/
 - DAZN way
-  - 1 micro frontend loaded at a time, don't want to share dependencies between micro frontends
+  - 1 micro frontend loaded at a time
+  - no shared dependencies between micro frontends
   - 1 micro frontend per business domain (DDD)
-  - Bootstraper loads first, retrieves some config from the API, based on request/url/whatever selects the correct micro frontend
+  - Request flow
+      - Bootstraper loads first
+      - retrieves some config from the API
+      - resolves micro-frontend based on request/url/whatever
+      - mounts the micro-frontend with config
+
   - https://medium.com/dazn-tech/adopting-a-micro-frontends-architecture-e283e6a3c4f3
 
 ---
+
 
 ### GraphQL
 1. Workshop
