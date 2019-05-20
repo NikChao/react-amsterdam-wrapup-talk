@@ -9,7 +9,7 @@ import Container from './container'
 ### About me
 <p style={{ margin: 0, marginBottom: '25px' }}><b>Frontend engineer at Rexlabs</b></p>
 <p style={{ margin: 0, marginBottom: '25px' }}><b>went to React Amsterdam in April</b></p>
-<p style={{ margin: 0, marginBottom: '25px' }}><b>Twitter:</b> https://twitter.com/nik_the_dev</p>
+<p style={{ margin: 0, marginBottom: '25px' }}><b>Twitter:</b>  <a style={{ textDecoration: 'none' }} href="https://twitter.com/nik_the_dev">@nik_the_dev</a></p>
 <p style={{ margin: 0, marginBottom: '55px' }}><b>Slides at:</b> https://github.com/NikChao/react-amsterdam-wrapup-talk</p>
 <div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'flex-end' }}>
   <img style={{ height: '250px', width: 'auto' }} src="./rexlabs.svg" />
@@ -18,22 +18,26 @@ import Container from './container'
 
 ---
 
-### What did people talk about?
-
----
-
 ### 1. Design systems
 
 ---
 
+### What is a design system?
+- A Langauge
+- A foundation, set of primitives, and set of patterns
+- A way of Reducing choice in building blocks
+ <!-- (typography, color, spacing) -->
 
-- Reducing choice in building blocks (typography, color, spacing)
+---
+
+### Cool takeaways
 - We can use simplified react to bridge the gap between design/FE development
 
-<p style={{ padding: '80px' }} />
-<div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
-  <img src="./braid.png" style={{ height: '75px' }} />
-  <img src="./playroom.png" style={{ height: '75px' }} />
+---
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
+  <img src="./braid.png" style={{ height: '75px', margin: '75px' }} />
+  <img src="./playroom.png" style={{ height: '75px', margin: '75px' }} />
 </div>
 
 ---
@@ -57,20 +61,29 @@ import Container from './container'
 
 ---
 
-- Becoming more popular, especially `Next.js`
+### What is SSR?
+
+- Rendering the page on the server and sending a fully rendered page to the client
+- Try it out with `Next.js`
 <!-- Max Stoiber regrets not using Next.js for spectrum -->
 
 
-- Can be a performance win
-  - Companies (like Netflix) using SSR for performance
+
+---
+
+### Cool takeaways
+
+- Becoming trememdously popular
+
+
+- Can be a HUGE performance win
+  - Companies (like Netflix) using SSR for huge performance wins
    <!-- getting +50% perceived perf by removing all client side react -->
-  - esxjs which is an optimisation over Next js
 
 
 
 - https://nextjs.org
-
-
+- https://github.com/esxjs/esx
 
 ---
 
@@ -78,15 +91,17 @@ import Container from './container'
 
 ---
 
+### What are micro-frontends
 - Solving the problem of colaborating on large frontends
 
-- **Spotify way:** Many iframes rendered on the page which communicate with an in-house event bus
+
+- **Spotify:** Many iframes rendered on the page which communicate with an in-house event bus
 <!-- although they're moving to a react-redux solution so we'll see what they do with that  -->
 - **SkyScanner/OpenTable:** https://opencomponents.github.io/
 
 ---
 
-### Micro-frontends continued: DAZN
+### Cool takeaways ft. DAZN
 
 - 1 micro frontend loaded at a time
 - no shared dependencies between micro frontends
@@ -139,7 +154,7 @@ import Container from './container'
 
 ---
 
-### Fundamentals/React/Misc
+### Fundamentals
 
 ---
 
