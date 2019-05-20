@@ -5,21 +5,40 @@ import Container from './container'
 ## React 🇳🇱 wrap up
 
 ---
-<!--
-**About me**
-- Work at `rexlabs.io`
-- I went to react amsterdam in April
- 
--->
+
+### About me
+<p style={{ margin: 0, marginBottom: '25px' }}><b>Frontend engineer at Rexlabs</b></p>
+<p style={{ margin: 0, marginBottom: '25px' }}><b>went to React Amsterdam in April</b></p>
+<p style={{ margin: 0, marginBottom: '25px' }}><b>Twitter:</b> https://twitter.com/nik_the_dev</p>
+<p style={{ margin: 0, marginBottom: '55px' }}><b>Slides at:</b> https://github.com/NikChao/react-amsterdam-wrapup-talk</p>
+<div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'flex-end' }}>
+  <img style={{ height: '250px', width: 'auto' }} src="./rexlabs.svg" />
+  <img style={{ height: '250px', width: 'auto' }} src="react-amsterdam.svg" />
+</div>
+
 ---
 
-### Design systems
+### What did people talk about?
 
 ---
+
+### 1. Design systems
+
+---
+
 
 - Reducing choice in building blocks (typography, color, spacing)
 - We can use simplified react to bridge the gap between design/FE development
 
+<p style={{ padding: '80px' }} />
+<div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
+  <img src="./braid.png" style={{ height: '75px' }} />
+  <img src="./playroom.png" style={{ height: '75px' }} />
+</div>
+
+---
+
+### A lot of links
 - https://airbnb.design/building-a-visual-language/
 - https://component-driven.github.io/component-driven-development/styleguide
 
@@ -30,70 +49,93 @@ import Container from './container'
 - https://github.com/seek-oss/playroom
 
 
-<div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
-  <img src="./braid.png" style={{ height: '75px' }} />
-  <img src="./playroom.png" style={{ height: '75px' }} />
-</div>
-
 ---
 
-### SSR
+
+### 2. SSR
+
 
 ---
 
 - Becoming more popular, especially `Next.js`
 <!-- Max Stoiber regrets not using Next.js for spectrum -->
 
-- Performance
-  - netflix getting +50% perceived perf by removing all client side react
+
+- Can be a performance win
+  - Companies (like Netflix) using SSR for performance
+   <!-- getting +50% perceived perf by removing all client side react -->
   - esxjs which is an optimisation over Next js
 
-- 🆕 https://nextjs.org
+
+
+- https://nextjs.org
+
+
 
 ---
 
-### Micro frontends
+### 3. Micro frontends
 
 ---
 
 - Solving the problem of colaborating on large frontends
-- Spotify way: Many iframes rendered on the page which communicate with an in-house event bus
+
+- **Spotify way:** Many iframes rendered on the page which communicate with an in-house event bus
 <!-- although they're moving to a react-redux solution so we'll see what they do with that  -->
-- SkyScanner/OpenTable use https://opencomponents.github.io/
-- DAZN talked about how they break FE work across many teams
+- **SkyScanner/OpenTable:** https://opencomponents.github.io/
 
 ---
 
-### DAZN way
+### Micro-frontends continued: DAZN
+
 - 1 micro frontend loaded at a time
 - no shared dependencies between micro frontends
-- 1 micro frontend per business domain (DDD)
+- 1 micro frontend per business domain
+
+
 - Request flow
     - Bootstraper loads first
     - retrieves some config from the API
     - resolves micro-frontend based on request/url/whatever
     - mounts the micro-frontend with config
 
+
 - https://medium.com/dazn-tech/adopting-a-micro-frontends-architecture-e283e6a3c4f3
 
 ---
 
-### GraphQL
+<div style={{ height: '100%', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+  <img style={{ height: '70%', width: '70%' }} src='./dazn.png' />
+</div>
+
+---
+
+<h3 style={{ marginLeft: '-80px', display: 'flex', alignItems: 'center'}}>GraphQL <img style={{ marginLeft: '40px' }} src="gql.svg" />
+</h3>
 
 ---
 
 ### Workshop
-- serving graph-ql is actually a piece of cake with the right tools (yoga, graphpack)
-- react-apollo-hooks is very good, but not official, therefore requires a different context provider to react-apollo(-boost)
+- serving graph-ql is a piece of cake
+  - prisma/graphql-yoga
+  - graphpack
 
+
+- consuming graqh-ql is a piece of cake too
+  - react-apollo-boost
+  - react-apollo-hooks
 
 ---
 
 
-### Conf talk
+### Conference talk by Apollo
+
 - 2019 will be about DX for apollo
 - better TS support (apollo-cli can already auto-gen TS based on GQL schema)
 - better suggestions (i.e. for query perf)
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  <img src="apollo.png" style={{ marginTop: '100px', height: '200px', width: 'auto' }} />
+</div>
 
 ---
 
@@ -101,13 +143,20 @@ import Container from './container'
 
 ---
 
-- babel repl is good for figuring out exactly what's going on
+- You should understand your abstractions
 
-- components should take props which handle behaviour not interaction
+https://github.com/kentcdodds/requisite-react
+
+
+- How to write better react
+
+https://sid.studoi/refactoring
+
+<!-- - components should take props which handle behaviour not interaction
 - components should do as little as possible and do it well, delegate up if you can
-- if some logic isn't core to a feature, put it in a HOC or hook
+- if some logic isn't core to a feature, put it in a HOC or hook -->
 
-- When designing an app which is mobile first/web for support, max stoiber says use react-native-web
+<!-- - When designing an app which is mobile first/web for support, max stoiber says use react-native-web -->
 
 ---
 
